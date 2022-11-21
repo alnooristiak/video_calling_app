@@ -37,15 +37,15 @@ const index = () => {
 export default index
 
 const styles = StyleSheet.create({
+    mainContainer: {
+        marginTop: 35,
+    },
     searchInput: {
         backgroundColor: '#95a5a6',
         margin: 15,
         padding: 7,
         borderRadius: 4,
         color: 'white',
-    },
-    mainContainer: {
-        marginTop: 35,
     },
     contactListS: {
         padding: 15,

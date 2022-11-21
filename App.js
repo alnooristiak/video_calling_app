@@ -5,6 +5,7 @@ import {
   Text, 
   View 
 } from 'react-native';
+import CallingScreen from './screens/callingScreen/CallingScreen.js';
 import Index from './screens/contactScreen/Index.js';
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'dark-content'} />
-        <Index></Index>
+        {/* <Index></Index> */}
+        <CallingScreen></CallingScreen>
     </SafeAreaView>
   );
 }
