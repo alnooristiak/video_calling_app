@@ -1,5 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { Feather } from '@expo/vector-icons';
+import { SimpleLineIcons } from '@expo/vector-icons';
+
 
 const CallingScreen = () => {
     return (
@@ -10,9 +13,22 @@ const CallingScreen = () => {
             </View>
             {/* button container section */}
             <View style={styles.buttonContainer}>
-                <Text>icon</Text>
+                <View>
+                    <Feather name="camera" size={24} color="white" />
+                </View>
+                <View>
+                    <Feather name="video" size={24} color="white" />
+                    {/* <Feather name="video-off" size={24} color="black" /> */}
+                </View>
+                <View>
+                    <SimpleLineIcons name="call-end" size={24} color="white" />
+                </View>
+                <View>
+                    <SimpleLineIcons name="call-end" size={24} color="white" />
+                </View>
             </View>
         </View>
+
     )
 }
 
@@ -44,10 +60,12 @@ const styles = StyleSheet.create({
     buttonContainer: {
         backgroundColor: 'black',
         // width: '100%',
-        padding: 15,
+        padding: 25,
         borderTopLeftRadius: 15,
         borderTopRightRadius: 15,
         // marginTop: 'auto',
         marginBottom: 50,
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     }
 })
