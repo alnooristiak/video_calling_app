@@ -1,20 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  SafeAreaView, 
+  ScrollView, 
+  StyleSheet, 
+  Text, 
+  View 
+} from 'react-native';
+import Index from './screens/contactScreen/Index.js';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView>
       <StatusBar barStyle={'dark-content'} />
-      <Text>hay tihis is me</Text>
-    </View>
+      <ScrollView>
+        <Index></Index>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
