@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { 
   SafeAreaView, 
-  ScrollView, 
   StyleSheet, 
   Text, 
   View 
@@ -13,9 +12,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'dark-content'} />
-      <ScrollView>
         <Index></Index>
-      </ScrollView>
     </SafeAreaView>
   );
 }

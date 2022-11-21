@@ -1,16 +1,31 @@
 import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
-import contacts from '../../assets/deta/contacts.json';
+import React, { useEffect, useState } from 'react'
+import dumyContacts from '../../assets/deta/contacts.json';
 
 
 const index = () => {
+
+    const [searchName, setSearchName] = useState('');
+    const [filteredContacted, setFilteredContacted] = useState(dumyContacts);
+
+    useEffect(() => {
+        const newContact = dumyContacts.filter(contact => contact.user_display_name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()), );
+        setFilteredContacted(newContact);
+    }, [searchName]);
+
     return (
         <View style={styles.mainContainer}>
-            <TextInput style={styles.searchInput} placeholder='Search Name....' />
+            {/* search input section */}
+            <TextInput 
+            value={searchName}
+            onChangeText={setSearchName}
+            style={styles.searchInput} 
+            placeholder='Search Name....' 
+            />
             {/* Loding Contact List Data */}
             <View style={styles.contactListS}>
                 <FlatList
-                    data={contacts}
+                    data={filteredContacted}
                     renderItem={({ item }) => <Text style={styles.dataItem}>{item.user_display_name}</Text>}
                 >
                 </FlatList>
