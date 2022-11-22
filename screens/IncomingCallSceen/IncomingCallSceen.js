@@ -1,4 +1,4 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import bg from '../../assets/images/incoming_bg.png';
 import { Entypo } from '@expo/vector-icons';
@@ -7,6 +7,17 @@ import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 const IncomingCallSceen = () => {
+
+    // On Delete hendeler 
+    const onDelete = () => {
+        console.warn('deleted');
+    }
+
+    // On Accept hendeler 
+    const onAccept = () => {
+        console.warn('Accept');
+    }
+
   return (
     <View style={styles.incomingCallSceen}>
         <ImageBackground style={styles.bgImage} source={bg} resizeMode='cover'>
@@ -23,14 +34,14 @@ const IncomingCallSceen = () => {
                 </View>
             </View>
             <View style={styles.iconTmainContainer}>
-                <View style={styles.iconTextBottom}>
+                <Pressable onPress={onDelete} style={styles.iconTextBottom}>
                     <Entypo name="cross" size={24} color="white" />
                     <Text>Delete</Text>
-                </View>
-                <View style={styles.iconTextBottom}>
+                </Pressable>
+                <Pressable onPress={onAccept} style={styles.iconTextBottom}>
                     <FontAwesome5 name="check" size={24} color="white" />
                     <Text>Accept</Text>
-                </View>
+                </Pressable>
             </View>
         </ImageBackground>
     </View>

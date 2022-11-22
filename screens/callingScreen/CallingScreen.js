@@ -1,9 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Feather } from '@expo/vector-icons';
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import CallAction from '../components/callAction/callAction'
 
 const CallingScreen = () => {
     return (
@@ -13,21 +10,7 @@ const CallingScreen = () => {
                 <Text style={styles.contactNo}>+880 1710335722</Text>
             </View>
             {/* button container section */}
-            <View style={styles.buttonContainer}>
-                <View style={styles.iconContainer}>
-                    <Feather name="camera" size={24} color="white" />
-                </View>
-                <View style={styles.iconContainer}>
-                    <Feather name="video" size={24} color="white" />
-                    {/* <Feather name="video-off" size={24} color="black" /> */}
-                </View>
-                <View style={styles.iconContainer}>
-                    <MaterialCommunityIcons name="microphone-off" size={24} color="white" />
-                </View>
-                <View style={styles.iconContainer}>
-                    <SimpleLineIcons name="call-end" size={24} color="white" />
-                </View>
-            </View>
+            <CallAction />
         </View>
 
     )
