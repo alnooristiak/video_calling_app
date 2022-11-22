@@ -5,10 +5,10 @@ import {
   Text, 
   View 
 } from 'react-native';
-import CallingScreen from './screens/callingScreen/CallingScreen.js';
+// import CallingScreen from './screens/callingScreen/CallingScreen.js';
 import CallScreen from './screens/callScreen/CallScreen.js';
-import Index from './screens/contactScreen/Index.js';
-import IncomingCallSceen from './screens/IncomingCallSceen/IncomingCallSceen.js';
+// import Index from './screens/contactScreen/Index.js';
+// import IncomingCallSceen from './screens/IncomingCallSceen/IncomingCallSceen.js';
 
 export default function App() {
 
@@ -23,6 +23,6 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+// const styles = StyleSheet.create({
 
-});
+// });

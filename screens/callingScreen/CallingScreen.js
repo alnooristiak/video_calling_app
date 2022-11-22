@@ -40,25 +40,4 @@ const styles = StyleSheet.create({
         color: 'white',
         marginTop: 10,
     },
-    // button container sec css
-    buttonContainer: {
-        backgroundColor: 'black',
-        // width: '100%',
-        padding: 35,
-        borderTopLeftRadius: 15,
-        borderTopRightRadius: 15,
-        // marginTop: 'auto',
-        marginBottom: 60,
-        flexDirection: 'row',
-        justifyContent: 'space-around'
-    },
-    iconContainer: {
-        backgroundColor: '#535c68',
-        padding: 8,
-        width: 45,
-        height: 45,
-        borderRadius: 22,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
 })
