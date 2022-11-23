@@ -29,9 +29,9 @@ const CallAction = () => {
     }
 
     // on Phone Call hendeler 
-    const onPhoneClose = () => {
-        setIsPhoneOn(!isPhoneOn);
-    }
+    // const onPhoneClose = () => {
+    //     setIsPhoneOn(!isPhoneOn);
+    // }
 
     return (
         <View style={styles.buttonContainer}>
@@ -52,6 +52,7 @@ const CallAction = () => {
                 <MaterialCommunityIcons 
                 name={isMicroPon ? "microphone-off" : "microphone"} size={24} color="white" />
             </Pressable>
+            {/* phone icon section */}
             <Pressable 
             onPress={onPhoneClose}
             style={styles.iconContainer}>
