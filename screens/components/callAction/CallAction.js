@@ -1,29 +1,36 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Feather } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const CallAction = () => {
 
+    const [isCemeraOn, setIsCemeraOn] = useState(true);
+    const [isVideoOn, setIsVideoOn] = useState(true);
+    const [isMicroPon, setIsMicroPon] = useState(true);
+    const [isPhoneOn, setIsPhoneOn] = useState(true);
+
     // on cemera hendeler 
     const onOpenCemera = () => {
-        console.warn("onOpenCemera");
+        // console.warn("onOpenCemera");
+        setIsCemeraOn(!isCemeraOn);
     }
 
     // on Video cemera hendeler 
     const onOpenVideo = () => {
-        console.warn("onOpenVideo");
+        // console.warn("onOpenVideo");
+        setIsVideoOn(!isVideoOn);
     }
 
     // on MicroPhone hendeler 
     const onOpenMicroPhone = () => {
-        console.warn("onOpenMicroPhone");
+        setIsMicroPon(!isMicroPon);
     }
 
     // on Phone Call hendeler 
     const onPhoneClose = () => {
-        console.warn("onPhoneClose");
+        setIsPhoneOn(!isPhoneOn);
     }
 
     return (
@@ -31,23 +38,24 @@ const CallAction = () => {
             <Pressable
             onPress={onOpenCemera}
             style={styles.iconContainer}>
-                <Feather name="camera" size={24} color="white" />
+                <Feather name={isCemeraOn ? "camera-off" : "camera"} size={24} color="white" />
             </Pressable>
             <Pressable
             onPress={onOpenVideo}
             style={styles.iconContainer}>
-                <Feather name="video" size={24} color="white" />
+                <Feather name={isVideoOn ? "video-off" : "video"} size={24} color="white" />
                 {/* <Feather name="video-off" size={24} color="black" /> */}
             </Pressable>
             <Pressable 
             onPress={onOpenMicroPhone}
             style={styles.iconContainer}>
-                <MaterialCommunityIcons name="microphone-off" size={24} color="white" />
+                <MaterialCommunityIcons 
+                name={isMicroPon ? "microphone-off" : "microphone"} size={24} color="white" />
             </Pressable>
             <Pressable 
             onPress={onPhoneClose}
             style={styles.iconContainer}>
-                <SimpleLineIcons name="call-end" size={24} color="white" />
+                <SimpleLineIcons name={isPhoneOn ? "phone-off" : "call-end"} size={24} color="white" />
             </Pressable>
         </View>
     )

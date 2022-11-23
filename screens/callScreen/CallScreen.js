@@ -33,11 +33,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 50,
     },
     cameraPriview: {
-        width: 140,
+        width: 120,
         height: 170,
         backgroundColor: 'white',
         position: 'absolute',
         right: 10,
+        borderRadius: 8,
         top: 110,
     },
     nameText: {
