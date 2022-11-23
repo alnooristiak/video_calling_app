@@ -1,9 +1,12 @@
-import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native'
+import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import dumyContacts from '../../assets/deta/contacts.json';
+import { useNavigation } from '@react-navigation/native';
 
 
 const index = () => {
+
+    const navigation = useNavigation();
 
     const [searchName, setSearchName] = useState('');
     const [filteredContacted, setFilteredContacted] = useState(dumyContacts);
@@ -12,6 +15,12 @@ const index = () => {
         const newContact = dumyContacts.filter(contact => contact.user_display_name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()), );
         setFilteredContacted(newContact);
     }, [searchName]);
+
+    // call user hendeler
+    const callUser = (user) => {
+        // console.warn(user, "user call");
+        navigation.navigate("CallingScreen");
+    }
 
     return (
         <View style={styles.mainContainer}>
@@ -26,8 +35,11 @@ const index = () => {
             <View style={styles.contactListS}>
                 <FlatList
                     data={filteredContacted}
-                    renderItem={({ item }) => <Text style={styles.dataItem}>{item.user_display_name}</Text>}
-                >
+                    renderItem={({ item }) => <Pressable onPress={() => callUser(item)}>
+                        <Text style={styles.dataItem}>{item.user_display_name}</Text>
+                    </Pressable>
+                    }
+                    > 
                 </FlatList>
             </View>
         </View>

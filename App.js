@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { 
-  SafeAreaView, 
-  StyleSheet, 
-  Text, 
-  View 
-} from 'react-native';
+// import { 
+//   SafeAreaView, 
+//   StyleSheet, 
+//   Text, 
+//   View 
+// } from 'react-native';
 // import CallingScreen from './screens/callingScreen/CallingScreen.js';
-import CallScreen from './screens/callScreen/CallScreen.js';
+// import CallScreen from './screens/callScreen/CallScreen.js';
 import Navigator from './screens/navigator/Navigator.js';
 // import Index from './screens/contactScreen/Index.js';
 // import IncomingCallSceen from './screens/IncomingCallSceen/IncomingCallSceen.js';

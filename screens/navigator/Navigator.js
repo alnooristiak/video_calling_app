@@ -16,13 +16,18 @@ const Navigator = () => {
         <>
             <NavigationContainer>
                 <Stack.Navigator>
-                    <Stack.Screen name="Contacts" component={Index} options={{headerShown: false}} />
-                    {/* call screen */}
-                    <Stack.Screen name="Call" component={CallScreen} options={{headerShown: false}} />
-                    {/* calling screen */}
-                    <Stack.Screen name="Contacts" component={CallingScreen} options={{headerShown: false}} />
-                    {/* main incoming call screen */}
-                    <Stack.Screen name="Contacts" component={IncomingCallSceen} options={{headerShown: false}} />
+                    <Stack.Screen name="Contacts" component={Index} />
+
+                    <Stack.Group  screenOptions={{ headerShown: false }}>
+                        {/* call screen */}
+                        <Stack.Screen name="Call" component={CallScreen} />
+
+                        {/* calling screen */}
+                        <Stack.Screen name="CallingScreen" component={CallingScreen} />
+
+                        {/* main incoming call screen */}
+                        <Stack.Screen name="IncomingCall" component={IncomingCallSceen} />
+                    </Stack.Group>
                 </Stack.Navigator>
             </NavigationContainer>
         </>

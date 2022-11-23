@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, View } from 'react-native'
 import React, { useState } from 'react'
 import { Feather } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -29,9 +29,9 @@ const CallAction = () => {
     }
 
     // on Phone Call hendeler 
-    // const onPhoneClose = () => {
-    //     setIsPhoneOn(!isPhoneOn);
-    // }
+    const onPhoneClose = () => {
+        setIsPhoneOn(!isPhoneOn);
+    }
 
     return (
         <View style={styles.buttonContainer}>
@@ -62,7 +62,7 @@ const CallAction = () => {
     )
 }
 
-export default CallAction;
+export default CallAction
 
 const styles = StyleSheet.create({
     buttonContainer: {

@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import CallAction from '../components/callAction/CallAction';
+import CallAction from '../components/callAction/CallAction'
+
+
 
 const CallScreen = () => {
   return (
@@ -12,7 +14,7 @@ const CallScreen = () => {
             <Text style={styles.numberText}>my number</Text>
         </View>
         {/* Call action Button section */}
-        <CallAction></CallAction>
+        <CallAction />
     </View>
   )
 }
